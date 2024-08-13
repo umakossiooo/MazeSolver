@@ -32,7 +32,7 @@ agent_step!(agent, model) = move_along_route!(agent, model, pathfinder)
 
 # Our sample walkmap
 map_url =
-    "https://raw.githubusercontent.com/JuliaDynamics/" *
+    "https://raw.githubusercontent.com/JuliaDynamics/" *    
     "JuliaDynamics/master/videos/agents/maze.bmp"
 maze_map = load(download(map_url));
 model, pathfinder = initialize_model(maze_map)
@@ -44,7 +44,7 @@ abmvideo(
     model;
     figurekwargs = (size =(900,900),),
     frames=800,
-    framerate=10,
+    framerate=80,
     agent_color=:blue,
     agent_size=15,
     heatarray = _ -> pathfinder.walkmap,
